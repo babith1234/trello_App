@@ -1,9 +1,10 @@
+require('dotenv').config();
 describe('Test suite', () => {
 
-    const base = "https://api.trello.com";
-    const apikey="20c9657e000b9cb3ad66e359dfdce58d"
-    const token="ATTAf8effd26b46da2c66d81cc3a8d030cbf36cb41eeefc7d7a836554cefa603062aB394BA08"
-    const board="Trello Board";
+    const base = process.env.API_BASE;
+    const apikey= process.env.API_KEY;
+    const token=process.env.API_TOKEN;
+    const board=process.env.BOARD;
     let id;
 
     it('Creating a board', () => {

@@ -1,7 +1,8 @@
+require('dotenv').config();
 describe('Demo API Test', () => {
-    const baseURL = 'https://api.trello.com';
-    const apiKey = '20c9657e000b9cb3ad66e359dfdce58d';
-    const apiToken = 'ATTAf8effd26b46da2c66d81cc3a8d030cbf36cb41eeefc7d7a836554cefa603062aB394BA08';
+    const baseURL =  process.env.API_BASE;
+    const apiKey = process.env.API_KEY;
+    const apiToken =process.env.API_TOKEN;
     let id;
     it('Create a Board', () => {
         cy.request({
