@@ -1,12 +1,10 @@
 require('dotenv').config();
 describe('Test suite', () => {
-
     const base = process.env.API_BASE;
     const apikey= process.env.API_KEY;
     const token=process.env.API_TOKEN;
     const board=process.env.BOARD;
     let id;
-
     it('Creating a board', () => {
         cy.request({
 
